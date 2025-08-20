@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #1a1a1a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+.header {
+  position: fixed;    
+  top: 0;             
+  left: 0;             
+  width: 100%;        
+  z-index: 1000;       
+  background: linear-gradient(135deg, #111, #333);
+  padding: 10px 30px;
+  justify-content: flex-end;
+  
+  
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo {
+  font-size: 24px;
+  color: #fff;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #fff; 
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; 
+  background-color: #00aaff;
+  transition: width 0.3s ease;
+}
+
+
+.navbar a:hover {
+  color: #00aaff; 
+}
+
+.navbar a:hover::after {
+  width: 100%; 
+}
+
+
+.navbar a.active {
+  color: #00aaff;
+}
+
+.navbar a.active::after {
+  width: 100%;
+}
+
+
+
+
+.btn-signin {
+  background: #161717;
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 50px;
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: justify;
+  justify-content: center;
+}
+
+.hero-text h2 {
+  font-size: 40px;
+}
+
+.hero-text .price {
+  margin: 20px 0;
+  color: #00aaff;
+  font-size: 24px;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #00aaff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #333;
+  color: #fff;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img img {
+  max-width: 650px;
+  height: auto;
+  display: inline-block;
+}
+
+.hero-tag {
+  position: absolute;
+  font-weight: bold;
+  right: -1px;
+  top: 450px;
+  font-size: 170px;
+  color: #00aaff;
+  opacity: 4.4;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+
+section {
+  padding: 100px 50px;
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+
+.overlay-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 120px;
+  font-weight: 900;
+  color: #00aaff;
+  opacity: 0.09;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+}
+
+section h2,
+section p,
+section .product-grid,
+section .service-grid,
+section .member-grid,
+section .contact-container {
+  position: relative;
+  z-index: 1;
+}
+
+.products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 150px;
+}
+
+.products .product-card {
+  background: #222;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: visible; 
+  height: 200px; 
+}
+
+.products .product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.4);
+}
+
+.products .product-card img {
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: -120px;
+}
+
+.products .product-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+.services .service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 30px;
+  margin-top: 70px;
+}
+
+.services .service-card {
+  background: #222;
+  padding: 20px;              
+  border-radius: 12px;
+  display: flex;               
+  align-items: flex-start;    
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.services .service-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 15px rgba(0, 170, 255, 0.4);
+}
+
+.services .service-card img {
+  width: 120px;      
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.services .service-card .text {
+  display: flex;
+  flex-direction: column;  
+  justify-content: flex-start; 
+  text-align: left;
+}
+
+.services .service-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 8px 0;     
+}
+
+.services .service-card p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;              
+  text-align: left;
+}
+
+
+
+.members .member-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.members .member-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px; 
+  margin-top: 70px;
+}
+
+
+.members .member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.4);
+}
+
+.members .member-card img {
+  width: 120px;      
+  height: 120px;
+  margin-bottom: 15px;
+  object-fit: cover;  
+}
+
+.members .member-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.members .member-card p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 50px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.contact-form input {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #3a3a3a; 
+  color: #fff;
+
+}
+.contact-form textarea{
+  padding:70px;
+  background: #3a3a3a; 
+  
+}
+.contact-form button {
+  padding: 15px;
+  background: #00aaff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
